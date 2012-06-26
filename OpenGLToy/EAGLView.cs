@@ -16,6 +16,7 @@ namespace OpenGLToy
         [Export("initWithCoder:")]
         public EAGLView(NSCoder coder) : base (coder)
         {
+            _frameInterval = 1;
             LayerRetainsBacking = true;
             LayerColorFormat = EAGLColorFormat.RGBA8;
         }
@@ -33,18 +34,9 @@ namespace OpenGLToy
         
         protected override void CreateFrameBuffer()
         {
-            try
-            {
-                ContextRenderingApi = EAGLRenderingAPI.OpenGLES2;
-                base.CreateFrameBuffer();
-            } catch (Exception)
-            {
-                ContextRenderingApi = EAGLRenderingAPI.OpenGLES1;
-                base.CreateFrameBuffer();
-            }
-            
-//            if (ContextRenderingApi == EAGLRenderingAPI.OpenGLES2)
-//                LoadShaders ();
+            ContextRenderingApi = EAGLRenderingAPI.OpenGLES2;
+            base.CreateFrameBuffer();
+            // Load shaders
         }
         
         protected override void DestroyFrameBuffer()
@@ -53,37 +45,33 @@ namespace OpenGLToy
 //            DestroyShaders ();
         }
 
-
         protected override void OnRenderFrame(FrameEventArgs e)
         {
             base.OnRenderFrame(e);
-            
             MakeCurrent();
             
-            // Replace the implementation of this method to do your own custom drawing.
             GL.ClearColor(0.5f, 0.25f, 0.25f, 1.0f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+            // Draw
             SwapBuffers();
-            
         }
-
                 
         #region DisplayLink support
         
-        int frameInterval;
-        CADisplayLink displayLink;
+        int _frameInterval;
+        CADisplayLink _displayLink;
         
         public bool IsAnimating { get; private set; }
         
         // How many display frames must pass between each time the display link fires.
         public int FrameInterval {
             get {
-                return frameInterval;
+                return _frameInterval;
             }
             set {
                 if (value <= 0)
                     throw new ArgumentException ();
-                frameInterval = value;
+                _frameInterval = value;
                 if (IsAnimating) {
                     StopAnimating ();
                     StartAnimating ();
@@ -98,10 +86,9 @@ namespace OpenGLToy
             
             CreateFrameBuffer ();
             CADisplayLink displayLink = UIScreen.MainScreen.CreateDisplayLink (this, new Selector ("drawFrame"));
-            displayLink.FrameInterval = frameInterval;
+            displayLink.FrameInterval = _frameInterval;
             displayLink.AddToRunLoop (NSRunLoop.Current, NSRunLoop.NSDefaultRunLoopMode);
-            this.displayLink = displayLink;
-            
+            _displayLink = displayLink;
             IsAnimating = true;
         }
         
@@ -109,8 +96,8 @@ namespace OpenGLToy
         {
             if (!IsAnimating)
                 return;
-            displayLink.Invalidate ();
-            displayLink = null;
+            _displayLink.Invalidate ();
+            _displayLink = null;
             DestroyFrameBuffer ();
             IsAnimating = false;
         }
@@ -122,8 +109,6 @@ namespace OpenGLToy
         }
         
         #endregion
-        
-
     }
 }
 
