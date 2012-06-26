@@ -31,6 +31,7 @@ namespace OpenGLToy
             base.ViewDidLoad();
 			
             // Perform any additional setup after loading the view, typically from a nib.
+            SceneView.StartAnimating();
         }
 		
         public override void ViewDidUnload()

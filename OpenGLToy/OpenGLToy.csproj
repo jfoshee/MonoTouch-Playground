@@ -79,6 +79,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="OpenTK-1.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -90,6 +91,7 @@
     <Compile Include="OpenGLToyViewController.designer.cs">
       <DependentUpon>OpenGLToyViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="EAGLView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="OpenGLToyViewController_iPhone.xib" />
