@@ -11,7 +11,8 @@ namespace OpenGLToy
         {
             _shaderProgram = new ShaderProgram(
                 "Shader", 
-                new string[] { "position", "color" });
+                new string[] { "position", "color" },
+                new string[] { "translate", "translate2" });
         }
                 
         static float[] squareVertices = {
@@ -27,37 +28,32 @@ namespace OpenGLToy
             255,   0, 255, 255,
         };
         static float transY = 0.0f;
-        const int UNIFORM_TRANSLATE = 0;
-        const int UNIFORM_COUNT = 1;
-        int[] uniforms = new int [UNIFORM_COUNT];
-                
+        static float transX = 0.0f;
         const int ATTRIB_VERTEX = 0;
         const int ATTRIB_COLOR = 1;
-        const int ATTRIB_COUNT = 2;
 
         public void Render()
         {
-                // Use shader program.
+            // Use shader program.
             _shaderProgram.Use();
-                //GL.UseProgram (program);
                 
-                // Update uniform value.
-                GL.Uniform1 (uniforms [UNIFORM_TRANSLATE], transY);
-                transY += 0.075f;
+            // Update uniform value.
+            GL.Uniform1(_shaderProgram.Uniforms ["translate"], transY);
+            GL.Uniform1(_shaderProgram.Uniforms ["translate2"], transX);
+            transY += 0.075f;
+            transX += 0.05f;
                 
-                // Update attribute values.
-                GL.VertexAttribPointer (ATTRIB_VERTEX, 2, VertexAttribPointerType.Float, false, 0, squareVertices);
-                GL.EnableVertexAttribArray (ATTRIB_VERTEX);
-                GL.VertexAttribPointer (ATTRIB_COLOR, 4, VertexAttribPointerType.UnsignedByte, true, 0, squareColors);
-                GL.EnableVertexAttribArray (ATTRIB_COLOR);
+            // Update attribute values.
+            GL.VertexAttribPointer(ATTRIB_VERTEX, 2, VertexAttribPointerType.Float, false, 0, squareVertices);
+            GL.EnableVertexAttribArray(ATTRIB_VERTEX);
+            GL.VertexAttribPointer(ATTRIB_COLOR, 4, VertexAttribPointerType.UnsignedByte, true, 0, squareColors);
+            GL.EnableVertexAttribArray(ATTRIB_COLOR);
                 
-                // Validate program before drawing. This is a good check, but only really necessary in a debug build.
 #if DEBUG
+            // Validate program before drawing. This is a good check, but only really necessary in a debug build.
             _shaderProgram.Validate();
-
 #endif
-
-            GL.DrawArrays (BeginMode.TriangleStrip, 0, 4);
+            GL.DrawArrays(BeginMode.TriangleStrip, 0, 4);
         }
 
         public void Dispose()

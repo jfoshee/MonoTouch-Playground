@@ -1,15 +1,22 @@
 using System;
 using OpenTK.Graphics.ES20;
 using MonoTouch.Foundation;
+using System.Collections.Generic;
 
 namespace OpenGLToy
 {
     public class ShaderProgram : IDisposable
     {
         int _program;
+        public Dictionary<string, int> Uniforms {
+            get;
+            private set;
+        }
 
-        public ShaderProgram (string shaderName, string[] attributes)
+        public ShaderProgram (string shaderName, string[] attributes, string[] uniforms)
         {
+            Uniforms = new Dictionary<string, int>(); 
+
             int vertShader, fragShader;
             
             // Create shader program.
@@ -55,7 +62,8 @@ namespace OpenGLToy
             }
                         
             // Get uniform locations.
-            //uniforms [UNIFORM_TRANSLATE] = GL.GetUniformLocation (program, "translate");
+            foreach (var uniform in uniforms)
+                Uniforms[uniform] = GL.GetUniformLocation(_program, uniform);
             
             // Release vertex and fragment shaders.
             if (vertShader != 0) {
