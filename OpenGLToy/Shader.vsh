@@ -9,6 +9,5 @@ void main()
 {
     gl_Position = position;
     gl_Position.y += sin(translate) / 2.0;
-
     colorVarying = color;
 }

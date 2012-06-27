@@ -38,13 +38,11 @@ namespace OpenGLToy
         {
             ContextRenderingApi = EAGLRenderingAPI.OpenGLES2;
             base.CreateFrameBuffer();
-            // Load shaders
         }
         
         protected override void DestroyFrameBuffer()
         {
             base.DestroyFrameBuffer();
-//            DestroyShaders ();
         }
 
         protected override void OnRenderFrame(FrameEventArgs e)
@@ -52,7 +50,7 @@ namespace OpenGLToy
             base.OnRenderFrame(e);
             MakeCurrent();
             
-            GL.ClearColor(0.5f, 0.25f, 0.25f, 1.0f);
+            GL.ClearColor(0.2f, 0.2f, 0.2f, 1.0f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
             if (DoRender != null)
@@ -88,7 +86,6 @@ namespace OpenGLToy
         {
             if (IsAnimating)
                 return;
-            
             CreateFrameBuffer ();
             CADisplayLink displayLink = UIScreen.MainScreen.CreateDisplayLink (this, new Selector ("drawFrame"));
             displayLink.FrameInterval = _frameInterval;

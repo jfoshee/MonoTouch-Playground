@@ -13,7 +13,6 @@ namespace OpenGLToy
                 "Shader", 
                 new string[] { "position", "color" });
         }
-
                 
         static float[] squareVertices = {
             -0.5f, -0.33f,
@@ -54,10 +53,8 @@ namespace OpenGLToy
                 
                 // Validate program before drawing. This is a good check, but only really necessary in a debug build.
 #if DEBUG
-                if (!ShaderUtilities.ValidateProgram (_shaderProgram._program)) {
-                    Console.WriteLine ("Failed to validate program {0:x}", _shaderProgram._program);
-                    return;
-                }
+            _shaderProgram.Validate();
+
 #endif
 
             GL.DrawArrays (BeginMode.TriangleStrip, 0, 4);

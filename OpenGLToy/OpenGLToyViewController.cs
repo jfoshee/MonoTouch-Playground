@@ -1,7 +1,3 @@
-using System;
-using System.Drawing;
-
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 namespace OpenGLToy
@@ -50,6 +46,10 @@ namespace OpenGLToy
             // e.g. myOutlet.Dispose (); myOutlet = null;
 			
             ReleaseDesignerOutlets();
+
+            _sceneRenderer.Dispose();
+            _sceneRenderer = null;
+            SceneView.DoRender -= _sceneRenderer.Render;
         }
 		
         public override bool ShouldAutorotateToInterfaceOrientation(UIInterfaceOrientation toInterfaceOrientation)
