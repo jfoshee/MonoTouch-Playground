@@ -13,6 +13,8 @@ namespace OpenGLToy
     [Register ("EAGLView")]
     public class EAGLView : iPhoneOSGameView
     {
+        public event Action DoRender;
+
         [Export("initWithCoder:")]
         public EAGLView(NSCoder coder) : base (coder)
         {
@@ -52,7 +54,10 @@ namespace OpenGLToy
             
             GL.ClearColor(0.5f, 0.25f, 0.25f, 1.0f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-            // Draw
+
+            if (DoRender != null)
+                DoRender();
+
             SwapBuffers();
         }
                 

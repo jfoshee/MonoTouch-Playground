@@ -26,12 +26,18 @@ namespace OpenGLToy
             // Release any cached data, images, etc that aren't in use.
         }
 		
+        SceneRenderer _sceneRenderer;
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 			
             // Perform any additional setup after loading the view, typically from a nib.
+
             SceneView.StartAnimating();
+            _sceneRenderer = new SceneRenderer();
+            SceneView.DoRender += _sceneRenderer.Render;
+            // TODO: Start/Stop animating as we resign or become active
         }
 		
         public override void ViewDidUnload()

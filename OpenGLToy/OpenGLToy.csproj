@@ -92,10 +92,16 @@
       <DependentUpon>OpenGLToyViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="EAGLView.cs" />
+    <Compile Include="SceneRenderer.cs" />
+    <Compile Include="ShaderUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="OpenGLToyViewController_iPhone.xib" />
     <InterfaceDefinition Include="OpenGLToyViewController_iPad.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="Shader.vsh" />
+    <Content Include="Shader.fsh" />
+  </ItemGroup>
 </Project>
