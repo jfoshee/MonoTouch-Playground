@@ -95,6 +95,9 @@
     <Compile Include="SceneRenderer.cs" />
     <Compile Include="ShaderUtilities.cs" />
     <Compile Include="ShaderProgram.cs" />
+    <Compile Include="MyModel.cs" />
+    <Compile Include="UniformAttribute.cs" />
+    <Compile Include="VertexAttributeAttribugte.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="OpenGLToyViewController_iPhone.xib" />

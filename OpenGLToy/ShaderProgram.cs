@@ -11,7 +11,7 @@ namespace OpenGLToy
         public Dictionary<string, int> Uniforms { get; private set; }
         public Dictionary<string, int> Attributes { get; private set; }
 
-        public ShaderProgram(string shaderName, string[] attributes, string[] uniforms)
+        public ShaderProgram(string shaderName, IList<string> attributes, IList<string> uniforms)
         {
             Uniforms = new Dictionary<string, int>(); 
             Attributes = new Dictionary<string, int>();
@@ -45,7 +45,7 @@ namespace OpenGLToy
             
             // Bind attribute locations.
             // This needs to be done prior to linking.
-            for (int i = 0; i < attributes.Length; i++)
+            for (int i = 0; i < attributes.Count; i++)
             {
                 GL.BindAttribLocation(_program, i, attributes [i]);
                 Attributes [attributes [i]] = i;

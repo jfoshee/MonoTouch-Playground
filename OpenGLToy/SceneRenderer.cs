@@ -6,15 +6,17 @@ namespace OpenGLToy
     public class SceneRenderer : IDisposable
     {
         ShaderProgram _shaderProgram;
+        MyModel _model;
 
         public SceneRenderer()
         {
+            _model = new MyModel();
             _shaderProgram = new ShaderProgram(
                 "Shader", 
                 new string[] { "position", "color" },
-                new string[] { "transX", "transY" });
+                UniformAttribute.GetUniformNames(_model));
         }
-                
+
         static float[] squareVertices = {
             -0.5f, -0.33f,
             0.5f, -0.33f,
