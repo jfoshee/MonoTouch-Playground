@@ -98,6 +98,7 @@
     <Compile Include="MyModel.cs" />
     <Compile Include="UniformAttribute.cs" />
     <Compile Include="VertexAttributeAttribugte.cs" />
+    <Compile Include="ShaderUniforms.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="OpenGLToyViewController_iPhone.xib" />

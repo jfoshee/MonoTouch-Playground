@@ -8,12 +8,11 @@ namespace OpenGLToy
     public class ShaderProgram : IDisposable
     {
         int _program;
-        public Dictionary<string, int> Uniforms { get; private set; }
+        public int Program { get { return _program; } } 
         public Dictionary<string, int> Attributes { get; private set; }
 
-        public ShaderProgram(string shaderName, IList<string> attributes, IList<string> uniforms)
+        public ShaderProgram(string shaderName, IList<string> attributes)
         {
-            Uniforms = new Dictionary<string, int>(); 
             Attributes = new Dictionary<string, int>();
 
             int vertShader, fragShader;
@@ -66,11 +65,6 @@ namespace OpenGLToy
                 }
                 throw new Exception(String.Format("Failed to link program: {0:x}", _program));
             }
-                        
-            // Get uniform locations.
-            foreach (var uniform in uniforms)
-                Uniforms [uniform] = GL.GetUniformLocation(_program, uniform);
-            
             // Release vertex and fragment shaders.
             if (vertShader != 0)
             {
@@ -82,11 +76,6 @@ namespace OpenGLToy
                 GL.DetachShader(_program, fragShader);
                 GL.DeleteShader(fragShader);
             }
-        }
-
-        public void SetUniform(string uniformName, float value)
-        {
-            GL.Uniform1(Uniforms[uniformName], value);
         }
 
         public void SetAttributeArray(string attributeName, int size, VertexAttribPointerType type, bool normalized, int stride, float[] values)
