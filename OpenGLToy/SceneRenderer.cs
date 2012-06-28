@@ -7,7 +7,7 @@ namespace OpenGLToy
     {
         ShaderProgram _shaderProgram;
         MyModel _model;
-        ShaderUniforms _modelUniforms;
+        ModelUniforms _modelUniforms;
 
         public SceneRenderer()
         {
@@ -15,34 +15,23 @@ namespace OpenGLToy
             _shaderProgram = new ShaderProgram(
                 "Shader", 
                 new string[] { "position", "color" });
-            _modelUniforms = new ShaderUniforms(_model, _shaderProgram.Program);
+            _modelUniforms = new ModelUniforms(_model, _shaderProgram.Program);
         }
-
-        static float[] squareVertices = {
-            -0.5f, -0.33f,
-            0.5f, -0.33f,
-            -0.5f,  0.33f,
-            0.5f,  0.33f,
-        };
-        static byte[] squareColors = {
-            255, 255,   0, 255,
-            0,   255, 255, 255,
-            0,     0,   0,   0,
-            255,   0, 255, 255,
-        };
 
         public void Render()
         {
-            // Use shader program.
+            _model.Update();
+            
             _shaderProgram.Use();
-            // Update uniform value.
-            _model.transY += 0.075f;
-            _model.transX += 0.05f;
             _modelUniforms.UpdateUniformValues();
 
+
             // Update attribute values.
-            _shaderProgram.SetAttributeArray("position", 2, VertexAttribPointerType.Float, false, 0, squareVertices);
-            _shaderProgram.SetAttributeArray("color", 4, VertexAttribPointerType.UnsignedByte, true, 0, squareColors);
+            var vertexAttributes = VertexAttributeAttribute.GetLocations(_model, _shaderProgram.Program);
+            VertexAttributeAttribute.UpdateValue(_model, "position", vertexAttributes["position"]);
+
+            //_shaderProgram.SetAttributeArray("position", 2, VertexAttribPointerType.Float, false, 0, _model.position);
+            _shaderProgram.SetAttributeArray("color", 4, VertexAttribPointerType.UnsignedByte, true, 0, _model.color);
 #if DEBUG
             _shaderProgram.Validate();
 #endif

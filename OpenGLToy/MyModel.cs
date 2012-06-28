@@ -25,10 +25,16 @@ namespace OpenGLToy
         public byte[] color { get { return _color; } }
 
         [Uniform]
-        public float transY { get; set; }
+        public float transY { get; private set; }
 
         [Uniform]
-        public float transX  { get; set; }
+        public float transX  { get; private set; }
+
+        public void Update()
+        {
+            transY += 0.075f;
+            transX += 0.05f;
+        }
     }
 }
 

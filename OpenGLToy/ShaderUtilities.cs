@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using OpenTK.Graphics.ES20;
 
 namespace OpenGLToy
@@ -69,6 +70,15 @@ namespace OpenGLToy
                 return false;
             return true;
         }
+
+        public static Dictionary<string, int> GetLocations(IList<string> names, int shaderProgram, Func<int, string, int> getLocation)
+        {
+            Dictionary<string, int> locations = new Dictionary<string, int>(names.Count);
+            foreach (var name in names)
+                locations[name] = getLocation(shaderProgram, name);
+            return locations;
+        }
+
     }
 }
 
