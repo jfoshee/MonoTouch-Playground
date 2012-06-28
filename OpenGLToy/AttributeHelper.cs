@@ -12,11 +12,22 @@ namespace OpenGLToy
             var uniformNames = new List<string>();
             var type = o.GetType();
             foreach (var property in type.GetProperties()) {
-                var uniformAttribute = property.GetCustomAttributes(typeof(TAttribute), true).FirstOrDefault();
+                var uniformAttribute = GetAttribute<TAttribute>(property);
                 if (uniformAttribute != null)
                     uniformNames.Add(property.Name);
             }
             return uniformNames;
+        }
+
+        public static TAttribute GetAttribute<TAttribute>(object o) where TAttribute : Attribute
+        {
+            return GetAttribute<TAttribute>(o.GetType());
+        }
+
+        public static TAttribute GetAttribute<TAttribute>(MemberInfo member) where TAttribute : Attribute
+        {
+            return (TAttribute)member.
+                GetCustomAttributes(typeof(TAttribute), true).FirstOrDefault();
         }
 
         static PropertyInfo GetProperty(object model, string propertyName)

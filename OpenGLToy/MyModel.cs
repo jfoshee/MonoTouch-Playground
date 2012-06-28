@@ -1,5 +1,8 @@
+using OpenTK.Graphics.ES20;
+
 namespace OpenGLToy
 {
+    [Model(BeginMode.TriangleStrip, "position")]
     public class MyModel
     {
         float[,] _position = {
@@ -8,7 +11,7 @@ namespace OpenGLToy
             {-0.5f,  0.33f},
             { 0.5f,  0.33f},
         };
-                
+
         byte[,] _color = {
             {255, 255,   0, 255},
             {0,   255, 255, 255},

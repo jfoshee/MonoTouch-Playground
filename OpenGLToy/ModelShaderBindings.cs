@@ -16,6 +16,12 @@ namespace OpenGLToy
             _attributeLocations = VertexAttributeAttribute.GetLocations(model, shaderProgram);
         }
 
+        public void UpdateShaderBindings()
+        {
+            UpdateUniformValues();
+            UpdateAttributeValues();
+        }
+
         public void UpdateUniformValues()
         {
             foreach (var uniform in _uniformLocations)
@@ -37,4 +43,3 @@ namespace OpenGLToy
         }
     }
 }
-

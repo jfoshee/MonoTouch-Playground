@@ -20,12 +20,11 @@ namespace OpenGLToy
         {
             _model.Update();
             _shaderProgram.Use();
-            _shaderBindings.UpdateUniformValues();
-            _shaderBindings.UpdateAttributeValues();
+            _shaderBindings.UpdateShaderBindings();
 #if DEBUG
             _shaderProgram.Validate();
 #endif
-            GL.DrawArrays(BeginMode.TriangleStrip, 0, 4);
+            ModelAttribute.Draw(_model);
         }
 
         public void Dispose()
