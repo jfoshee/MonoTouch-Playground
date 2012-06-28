@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace OpenGLToy
@@ -23,9 +24,16 @@ namespace OpenGLToy
 
         public void UpdateAttributeValues()
         {
-            // TODO: Loop through vertex attributes
-            VertexAttributeAttribute.UpdateValue<float>(_model, "position", _attributeLocations["position"]);
-            VertexAttributeAttribute.UpdateValue<byte>(_model, "color", _attributeLocations["color"]);
+            foreach (var _attribute in _attributeLocations) {
+                var type = AttributeHelper.GetPropertyType(_model, _attribute.Key);
+                if (type == typeof(float[,]))
+                    VertexAttributeAttribute.UpdateValue<float>(_model, _attribute.Key, _attribute.Value);
+                else if (type == typeof(byte[,]))
+                    VertexAttributeAttribute.UpdateValue<byte>(_model, _attribute.Key, _attribute.Value);
+                else
+                    throw new NotImplementedException(
+                        String.Format("Type of vertex attribute not yet implemented: {0}", type));
+            }
         }
     }
 }

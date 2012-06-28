@@ -29,6 +29,12 @@ namespace OpenGLToy
             var property = GetProperty(model, propertyName);
             return (T)property.GetValue(model, new object[]{});
         }
+
+        public static Type GetPropertyType(object model, string propertyName)
+        {
+            var property = GetProperty(model, propertyName);
+            return property.PropertyType;
+        }
     }
 }
 
