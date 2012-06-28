@@ -30,6 +30,12 @@ namespace OpenGLToy
                 GetCustomAttributes(typeof(TAttribute), true).FirstOrDefault();
         }
 
+        public static TAttribute[] GetAttributes<TAttribute>(object o) where TAttribute : Attribute
+        {
+            return (TAttribute[])o.GetType().
+                GetCustomAttributes(typeof(TAttribute), true);
+        }
+
         static PropertyInfo GetProperty(object model, string propertyName)
         {
             return model.GetType().GetProperty(propertyName);

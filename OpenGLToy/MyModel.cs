@@ -2,6 +2,7 @@ using OpenTK.Graphics.ES20;
 
 namespace OpenGLToy
 {
+    [Shader("MyShader")]
     [Model(BeginMode.TriangleStrip, "position")]
     public class MyModel
     {

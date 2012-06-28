@@ -3,24 +3,38 @@ using System.Collections.Generic;
 
 namespace OpenGLToy
 {
-    public class ModelBindings
+    public class ModelBindings : IDisposable
     {
-        private object _model;
+        object _model;
+        IList<ShaderProgram> _shaderPrograms; 
         Dictionary<string, int> _uniformLocations;
         Dictionary<string, int> _attributeLocations;
 
-        public ModelBindings(object model, int shaderProgram)
+        public ModelBindings(object model)
         {
             _model = model;
-            _uniformLocations = UniformAttribute.GetLocations(model, shaderProgram);
-            _attributeLocations = VertexAttributeAttribute.GetLocations(model, shaderProgram);
+            _shaderPrograms = ShaderAttribute.LoadShaders(model);
+            _uniformLocations = UniformAttribute.GetLocations(model, _shaderPrograms[0].Program);
+            _attributeLocations = VertexAttributeAttribute.GetLocations(model, _shaderPrograms[0].Program);
         }
 
         public void Draw()
         {
+            UseShaders();
             UpdateUniformValues();
             UpdateAttributeValues();
             ModelAttribute.Draw(_model);
+        }
+
+        public void UseShaders()
+        {
+            foreach (var shader in _shaderPrograms)
+            {
+                shader.Use();
+                #if DEBUG
+                shader.Validate();
+                #endif
+            }
         }
 
         public void UpdateUniformValues()
@@ -41,6 +55,13 @@ namespace OpenGLToy
                     throw new NotImplementedException(
                         String.Format("Type of vertex attribute not yet implemented: {0}", type));
             }
+        }
+
+        public void Dispose()
+        {
+            foreach (var shader in _shaderPrograms)
+                shader.Dispose();
+            _shaderPrograms = null;
         }
     }
 }
