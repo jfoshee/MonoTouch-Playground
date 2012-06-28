@@ -16,7 +16,7 @@ namespace OpenGLToy
             _attributeLocations = VertexAttributeAttribute.GetLocations(model, shaderProgram);
         }
 
-        public void UpdateShaderBindings()
+        public void Draw()
         {
             UpdateUniformValues();
             UpdateAttributeValues();

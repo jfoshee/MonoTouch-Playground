@@ -6,20 +6,20 @@ namespace OpenGLToy
     {
         ShaderProgram _shaderProgram;
         MyModel _model;
-        ModelBindings _shaderBindings;
+        ModelBindings _modelBindings;
 
         public SceneRenderer()
         {
             _model = new MyModel();
             _shaderProgram = new ShaderProgram("Shader");
-            _shaderBindings = new ModelBindings(_model, _shaderProgram.Program);
+            _modelBindings = new ModelBindings(_model, _shaderProgram.Program);
         }
 
         public void Render()
         {
             _model.Update();
             _shaderProgram.Use();
-            _shaderBindings.UpdateShaderBindings();
+            _modelBindings.Draw();
 #if DEBUG
             _shaderProgram.Validate();
 #endif
