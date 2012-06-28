@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace OpenGLToy
 {
-    public class ModelShaderBindings
+    public class ModelBindings
     {
         private object _model;
         Dictionary<string, int> _uniformLocations;
         Dictionary<string, int> _attributeLocations;
 
-        public ModelShaderBindings(object model, int shaderProgram)
+        public ModelBindings(object model, int shaderProgram)
         {
             _model = model;
             _uniformLocations = UniformAttribute.GetLocations(model, shaderProgram);
@@ -20,6 +20,7 @@ namespace OpenGLToy
         {
             UpdateUniformValues();
             UpdateAttributeValues();
+            ModelAttribute.Draw(_model);
         }
 
         public void UpdateUniformValues()

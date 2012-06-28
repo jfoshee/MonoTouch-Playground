@@ -1,5 +1,4 @@
 using System;
-using OpenTK.Graphics.ES20;
 
 namespace OpenGLToy
 {
@@ -7,13 +6,13 @@ namespace OpenGLToy
     {
         ShaderProgram _shaderProgram;
         MyModel _model;
-        ModelShaderBindings _shaderBindings;
+        ModelBindings _shaderBindings;
 
         public SceneRenderer()
         {
             _model = new MyModel();
             _shaderProgram = new ShaderProgram("Shader");
-            _shaderBindings = new ModelShaderBindings(_model, _shaderProgram.Program);
+            _shaderBindings = new ModelBindings(_model, _shaderProgram.Program);
         }
 
         public void Render()
@@ -24,7 +23,6 @@ namespace OpenGLToy
 #if DEBUG
             _shaderProgram.Validate();
 #endif
-            ModelAttribute.Draw(_model);
         }
 
         public void Dispose()
