@@ -23,7 +23,9 @@ namespace OpenGLToy
 
         public void UpdateAttributeValues()
         {
-            VertexAttributeAttribute.UpdateValue(_model, "position", _attributeLocations["position"]);
+            // TODO: Loop through vertex attributes
+            VertexAttributeAttribute.UpdateValue<float>(_model, "position", _attributeLocations["position"]);
+            VertexAttributeAttribute.UpdateValue<byte>(_model, "color", _attributeLocations["color"]);
         }
     }
 }

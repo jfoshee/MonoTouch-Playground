@@ -14,21 +14,20 @@ namespace OpenGLToy
             return ShaderUtilities.GetLocations(names, shaderProgram, GL.GetAttribLocation);
         }
 
-        public static void UpdateValue(object model, string name, int location)
+        public static void UpdateValue<T>(object model, string name, int location) where T : struct
         {
-            var value = AttributeHelper.GetPropertyValue<float[]>(model, name);
+            var type = typeof(T);
+            var value = AttributeHelper.GetPropertyValue<T[,]>(model, name);
 
-            int size = 2; //value.Length;
-            bool normalized = false;
+            int size = value.GetLength(1);
+            bool normalized = type != typeof(float);
             int stride = 0;
-            VertexAttribPointerType type = VertexAttribPointerType.Float;
+            VertexAttribPointerType glType = type == typeof(float) ?
+                VertexAttribPointerType.Float :
+                VertexAttribPointerType.UnsignedByte;
 
-            GL.VertexAttribPointer<float>(location, size, type, normalized, stride, value);
+            GL.VertexAttribPointer<T>(location, size, glType, normalized, stride, value);
             GL.EnableVertexAttribArray(location);
-
-//            _shaderProgram.SetAttributeArray("position", 2, VertexAttribPointerType.Float, false, 0, _model.position);
-//            _shaderProgram.SetAttributeArray("color", 4, VertexAttribPointerType.UnsignedByte, true, 0, _model.color);
-
         }           
     }
 }

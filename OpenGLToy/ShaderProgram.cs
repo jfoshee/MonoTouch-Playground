@@ -1,7 +1,6 @@
 using System;
 using OpenTK.Graphics.ES20;
 using MonoTouch.Foundation;
-using System.Collections.Generic;
 
 namespace OpenGLToy
 {
@@ -9,12 +8,9 @@ namespace OpenGLToy
     {
         int _program;
         public int Program { get { return _program; } } 
-        public Dictionary<string, int> Attributes { get; private set; }
 
-        public ShaderProgram(string shaderName, IList<string> attributes)
+        public ShaderProgram(string shaderName)
         {
-            Attributes = new Dictionary<string, int>();
-
             int vertShader, fragShader;
             
             // Create shader program.
@@ -35,21 +31,11 @@ namespace OpenGLToy
                 Console.WriteLine("Failed to compile fragment shader");
                 throw new Exception("Failed to compile fragment shader");
             }
-            
-            // Attach vertex shader to program.
             GL.AttachShader(_program, vertShader);
-            
-            // Attach fragment shader to program.
             GL.AttachShader(_program, fragShader);
-            
-            // Bind attribute locations.
-            // This needs to be done prior to linking.
-            for (int i = 0; i < attributes.Count; i++)
-            {
-                GL.BindAttribLocation(_program, i, attributes [i]);
-                Attributes [attributes [i]] = i;
-            }
-            
+
+            // If we wanted to bind attribute locations we must do it here, before linking
+
             // Link program.
             if (!ShaderUtilities.LinkProgram(_program))
             {
@@ -76,18 +62,6 @@ namespace OpenGLToy
                 GL.DetachShader(_program, fragShader);
                 GL.DeleteShader(fragShader);
             }
-        }
-
-        public void SetAttributeArray(string attributeName, int size, VertexAttribPointerType type, bool normalized, int stride, float[] values)
-        {
-            GL.VertexAttribPointer(Attributes[attributeName], size, type, normalized, stride, values);
-            GL.EnableVertexAttribArray(Attributes[attributeName]);
-        }
-
-        public void SetAttributeArray(string attributeName, int size, VertexAttribPointerType type, bool normalized, int stride, byte[] values)
-        {
-            GL.VertexAttribPointer(Attributes[attributeName], size, type, normalized, stride, values);
-            GL.EnableVertexAttribArray(Attributes[attributeName]);
         }
 
         public void Validate()
