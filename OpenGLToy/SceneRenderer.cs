@@ -7,7 +7,7 @@ namespace OpenGLToy
     {
         ShaderProgram _shaderProgram;
         MyModel _model;
-        ModelUniforms _modelUniforms;
+        ModelShaderBindings _shaderBindings;
 
         public SceneRenderer()
         {
@@ -15,7 +15,7 @@ namespace OpenGLToy
             _shaderProgram = new ShaderProgram(
                 "Shader", 
                 new string[] { "position", "color" });
-            _modelUniforms = new ModelUniforms(_model, _shaderProgram.Program);
+            _shaderBindings = new ModelShaderBindings(_model, _shaderProgram.Program);
         }
 
         public void Render()
@@ -23,12 +23,11 @@ namespace OpenGLToy
             _model.Update();
             
             _shaderProgram.Use();
-            _modelUniforms.UpdateUniformValues();
+            _shaderBindings.UpdateUniformValues();
+            _shaderBindings.UpdateAttributeValues();
 
 
             // Update attribute values.
-            var vertexAttributes = VertexAttributeAttribute.GetLocations(_model, _shaderProgram.Program);
-            VertexAttributeAttribute.UpdateValue(_model, "position", vertexAttributes["position"]);
 
             //_shaderProgram.SetAttributeArray("position", 2, VertexAttribPointerType.Float, false, 0, _model.position);
             _shaderProgram.SetAttributeArray("color", 4, VertexAttribPointerType.UnsignedByte, true, 0, _model.color);
