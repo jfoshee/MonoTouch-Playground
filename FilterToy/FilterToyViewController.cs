@@ -3,6 +3,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.CoreImage;
+using MonoTouch.CoreGraphics;
 
 namespace FilterToy
 {
@@ -37,7 +38,6 @@ namespace FilterToy
         public override void Selected(UIPickerView uipv, int row, int comp)
         {
             OnFilterSelected(_filterNames [row]);
-//            Console.WriteLine(_filterNames[row]);
         }
     }
 
@@ -47,8 +47,6 @@ namespace FilterToy
         {
             base.ViewDidLoad();
             FilterPicker.Model = new FilterPickerViewModel(OnFilterSelected);
-            var uiImage = new UIImage("Images/photo.jpg");
-            ImageView.Image = uiImage;
         }
 
         static void SetImage(CIFilter filter, string name)
@@ -104,6 +102,26 @@ namespace FilterToy
             filter[new NSString("inputCubeData")] = NSData.FromArray(cubeData);
         }
 
+        static void HandleFalseColorFilter(CIFilter filter)
+        {
+            if (filter.Name != "CIFalseColor")
+                return;
+            var inputColor0 = new CIColor(UIColor.Red);
+            var inputColor1 = new CIColor(UIColor.Blue);
+            filter[new NSString("inputColor0")] = inputColor0;
+            filter[new NSString("inputColor1")] = inputColor1;
+        }
+
+        void MonochromeExample()
+        {
+            var mono = new CIColorMonochrome();
+            mono.Color = CIColor.FromRgb(1, 1, 1);
+            mono.Intensity = 1.0f;
+            var uiImage = new UIImage("Images/photo.jpg");
+            mono.Image = CIImage.FromCGImage(uiImage.CGImage);
+            DisplayFilterOutput(mono, ImageView);
+        }
+
         void OnFilterSelected(string filterName)
         {
             var filter = CIFilter.FromName(filterName);
@@ -111,6 +129,7 @@ namespace FilterToy
             SetImage(filter, "inputImage");
             SetImage(filter, "inputBackgroundImage");
             HandleColorCubeFilter(filter);
+            HandleFalseColorFilter(filter);
             DisplayFilterOutput(filter, ImageView);
         }
 

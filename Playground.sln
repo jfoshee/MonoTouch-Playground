@@ -129,6 +129,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = OpenGLToy\OpenGLToy.csproj
+		StartupItem = FilterToy\FilterToy.csproj
 	EndGlobalSection
 EndGlobal
