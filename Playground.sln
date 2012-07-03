@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterToy", "FilterToy\Filt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLToy", "OpenGLToy\OpenGLToy.csproj", "{5817668A-953C-4D45-9B08-E0BA26CB5D30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scroller", "Scroller\Scroller.csproj", "{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -31,6 +33,18 @@ Global
 		AppStore|iPhone = AppStore|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Debug|iPhone.Build.0 = Debug|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Release|iPhone.ActiveCfg = Release|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Release|iPhone.Build.0 = Release|iPhone
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{27B819DB-CD22-4294-8247-E68DD71413F9}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{27B819DB-CD22-4294-8247-E68DD71413F9}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{27B819DB-CD22-4294-8247-E68DD71413F9}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
@@ -129,6 +143,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = FilterToy\FilterToy.csproj
+		StartupItem = Scroller\Scroller.csproj
 	EndGlobalSection
 EndGlobal
