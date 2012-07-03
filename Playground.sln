@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLToy", "OpenGLToy\Open
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scroller", "Scroller\Scroller.csproj", "{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guesstures", "Guesstures\Guesstures.csproj", "{62CCC86E-A51C-47DC-9A25-219E5ACE2631}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -85,6 +87,18 @@ Global
 		{5817668A-953C-4D45-9B08-E0BA26CB5D30}.Release|iPhone.Build.0 = Release|iPhone
 		{5817668A-953C-4D45-9B08-E0BA26CB5D30}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{5817668A-953C-4D45-9B08-E0BA26CB5D30}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Debug|iPhone.Build.0 = Debug|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Release|iPhone.ActiveCfg = Release|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Release|iPhone.Build.0 = Release|iPhone
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{6E7C97C6-56C5-4BCC-A78A-713A1DECC878}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{6E7C97C6-56C5-4BCC-A78A-713A1DECC878}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{6E7C97C6-56C5-4BCC-A78A-713A1DECC878}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
@@ -143,6 +157,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Scroller\Scroller.csproj
+		StartupItem = Guesstures\Guesstures.csproj
 	EndGlobalSection
 EndGlobal
