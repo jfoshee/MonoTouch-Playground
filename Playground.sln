@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scroller", "Scroller\Scroll
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guesstures", "Guesstures\Guesstures.csproj", "{62CCC86E-A51C-47DC-9A25-219E5ACE2631}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextToy", "TextToy\TextToy.csproj", "{8FB73087-169F-4DD6-9854-C756B596F6B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -119,6 +121,18 @@ Global
 		{73C3CD96-57F9-4993-8781-BF21F703A9E1}.Release|iPhone.Build.0 = Release|iPhone
 		{73C3CD96-57F9-4993-8781-BF21F703A9E1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{73C3CD96-57F9-4993-8781-BF21F703A9E1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Debug|iPhone.Build.0 = Debug|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Release|iPhone.ActiveCfg = Release|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Release|iPhone.Build.0 = Release|iPhone
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
@@ -157,6 +171,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Guesstures\Guesstures.csproj
+		StartupItem = TextToy\TextToy.csproj
 	EndGlobalSection
 EndGlobal
