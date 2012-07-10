@@ -3,6 +3,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.CoreGraphics;
+using System.Collections.Generic;
 
 namespace TextToy
 {
@@ -33,6 +34,8 @@ namespace TextToy
             SetNeedsDisplayInRect(Bounds);
         }
 
+        List<UILabel> _labels = new List<UILabel>();
+
         public TextView (RectangleF frame)
             :base(frame)
         {
@@ -42,6 +45,13 @@ namespace TextToy
             AddGestureRecognizer(_pinch);
             _pan.AddTarget(OnPan);
             _pinch.AddTarget(OnPinch);
+
+            for (int i = 0; i < 100; i++) {
+                var label = new UILabel(new RectangleF(10, i, 100, 40));
+                label.Text = i.ToString();
+                _labels.Add(label);
+                Add(label);
+            }
         }
 
         public override void Draw(RectangleF rect)
@@ -51,7 +61,12 @@ namespace TextToy
                 for (int j = 0; j < 6; j++) {
                     var s = new NSString(String.Format("({0}, {1})", i, j));
                     var p = new PointF(_point.X + i * 3 * _size , _point.Y + j * _size);
-                    s.DrawString(p, UIFont.FromName("Helvetica", _size));
+//                    s.DrawString(p, UIFont.FromName("Helvetica", _size));
+                    var lbl = _labels[i * 10 + j];
+                    lbl.Text = s;
+                    lbl.Font = UIFont.FromName("Helvetica", _size);
+                    lbl.Frame = new RectangleF(p, new SizeF(100, 40));
+                    lbl.SizeToFit();
                 }
             }
         }
