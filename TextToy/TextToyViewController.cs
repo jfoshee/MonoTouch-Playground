@@ -47,8 +47,13 @@ namespace TextToy
         public override void Draw(RectangleF rect)
         {
             base.Draw(rect);
-            var s = new NSString("Hello");
-            s.DrawString(_point, UIFont.FromName("Helvetica", _size));
+            for (int i = 0; i < 5; i++) {
+                for (int j = 0; j < 6; j++) {
+                    var s = new NSString(String.Format("({0}, {1})", i, j));
+                    var p = new PointF(_point.X + i * 3 * _size , _point.Y + j * _size);
+                    s.DrawString(p, UIFont.FromName("Helvetica", _size));
+                }
+            }
         }
     }
 
