@@ -8,17 +8,47 @@ namespace TextToy
 {
     public class TextView : UIView
     {
+        UIPanGestureRecognizer _pan = new UIPanGestureRecognizer();
+        UIPinchGestureRecognizer _pinch = new UIPinchGestureRecognizer();
+        PointF _point = new PointF(100, 100);
+        float _size = 14;
+
+        PointF _panningStartingPoint;
+        void OnPan()
+        {
+            if (_pan.State == UIGestureRecognizerState.Began)
+                _panningStartingPoint = _point;
+            var d = _pan.TranslationInView(this);
+            var p = _panningStartingPoint;
+            _point = new PointF(p.X + d.X, p.Y + d.Y);
+            SetNeedsDisplayInRect(Bounds);
+        }
+
+        float _pinchingStartingSize;
+        void OnPinch()
+        {
+            if (_pinch.State == UIGestureRecognizerState.Began)
+                _pinchingStartingSize = _size;
+            _size = _pinchingStartingSize * _pinch.Scale;
+            SetNeedsDisplayInRect(Bounds);
+        }
+
         public TextView (RectangleF frame)
             :base(frame)
         {
             BackgroundColor = UIColor.White;
+            AutoresizingMask = UIViewAutoresizing.All;
+            AddGestureRecognizer(_pan);
+            AddGestureRecognizer(_pinch);
+            _pan.AddTarget(OnPan);
+            _pinch.AddTarget(OnPinch);
         }
 
         public override void Draw(RectangleF rect)
         {
             base.Draw(rect);
             var s = new NSString("Hello");
-            s.DrawString(new PointF(20, 20), UIFont.FromName("Helvetica", 14));
+            s.DrawString(_point, UIFont.FromName("Helvetica", _size));
         }
     }
 
