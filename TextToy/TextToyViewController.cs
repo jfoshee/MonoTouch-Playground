@@ -35,6 +35,8 @@ namespace TextToy
         }
 
         List<UILabel> _labels = new List<UILabel>();
+        List<UIImage> _images = new List<UIImage>();
+
 
         public TextView (RectangleF frame)
             :base(frame)
@@ -47,28 +49,64 @@ namespace TextToy
             _pinch.AddTarget(OnPinch);
 
             for (int i = 0; i < 100; i++) {
-                var label = new UILabel(new RectangleF(10, i, 100, 40));
-                label.Text = i.ToString();
+                var label = new UILabel();
                 _labels.Add(label);
                 Add(label);
             }
+
+            for (int i = 0; i < 100; i++) {
+                for (int j = 0; j < 10; j++) {
+                    var s = String.Format("({0}, {1})", i, j);
+                    var img = StringToImage(s, 64);
+                    _images.Add(img);
+                }
+            }
+
+        }
+                
+        static public UIImage StringToImage(string s, float fontSize)
+        {
+            return StringToImage(s, UIFont.FromName("Helvetica", fontSize));
+        }
+
+        static public UIImage StringToImage(string s, UIFont font)
+        {
+            var ns = new NSString(s);
+            var size = ns.StringSize(font);
+            UIGraphics.BeginImageContext(size);
+            ns.DrawString(PointF.Empty, font);
+            var image = UIGraphics.GetImageFromCurrentImageContext();
+            UIGraphics.EndImageContext();
+            return image;
+        }
+
+        void DrawString(ref NSString s, ref PointF p)
+        {
+            s.DrawString(p, UIFont.FromName("Helvetica", _size));
+        }
+
+        void DrawLabel(ref int i, ref int j, ref NSString s, ref PointF p)
+        {
+            var lbl = _labels[i * 10 + j];
+            lbl.Text = s;
+            lbl.Font = UIFont.FromName("Helvetica", _size);
+            lbl.Frame = new RectangleF(p, new SizeF(100, 40));
+            lbl.SizeToFit();
         }
 
         public override void Draw(RectangleF rect)
         {
-            base.Draw(rect);
-            for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 6; j++) {
+            for (int i = 0; i < 10; i++) {
+                for (int j = 0; j < 10; j++) {
                     var s = new NSString(String.Format("({0}, {1})", i, j));
                     var p = new PointF(_point.X + i * 3 * _size , _point.Y + j * _size);
-//                    s.DrawString(p, UIFont.FromName("Helvetica", _size));
-                    var lbl = _labels[i * 10 + j];
-                    lbl.Text = s;
-                    lbl.Font = UIFont.FromName("Helvetica", _size);
-                    lbl.Frame = new RectangleF(p, new SizeF(100, 40));
-                    lbl.SizeToFit();
+//                    DrawString(ref s, ref p);
+//                    DrawLabel(ref i, ref j, ref s, ref p);
+                    var img = _images[i * 10 + j];
+                    img.Draw(new RectangleF(p, new SizeF(_size, _size)));
                 }
             }
+            base.Draw(rect);
         }
     }
 
