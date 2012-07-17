@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guesstures", "Guesstures\Gu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextToy", "TextToy\TextToy.csproj", "{8FB73087-169F-4DD6-9854-C756B596F6B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesAndBounds", "FramesAndBounds\FramesAndBounds.csproj", "{5A70D427-8BF4-4818-B1B7-48C09D3B939B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -89,6 +91,18 @@ Global
 		{5817668A-953C-4D45-9B08-E0BA26CB5D30}.Release|iPhone.Build.0 = Release|iPhone
 		{5817668A-953C-4D45-9B08-E0BA26CB5D30}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{5817668A-953C-4D45-9B08-E0BA26CB5D30}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Debug|iPhone.Build.0 = Debug|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Release|iPhone.ActiveCfg = Release|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Release|iPhone.Build.0 = Release|iPhone
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
@@ -171,6 +185,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TextToy\TextToy.csproj
+		StartupItem = FramesAndBounds\FramesAndBounds.csproj
 	EndGlobalSection
 EndGlobal
