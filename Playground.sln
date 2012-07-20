@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextToy", "TextToy\TextToy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramesAndBounds", "FramesAndBounds\FramesAndBounds.csproj", "{5A70D427-8BF4-4818-B1B7-48C09D3B939B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scroller2", "Scroller2\Scroller2.csproj", "{D2A26363-BAF4-4EC4-823F-2C3674010A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLK1", "GLK1\GLK1.csproj", "{E75CDAFC-135E-40B8-A38A-84FBC518951D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -159,6 +163,18 @@ Global
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.Release|iPhone.Build.0 = Release|iPhone
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Debug|iPhone.Build.0 = Debug|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Release|iPhone.Build.0 = Release|iPhone
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D2A26363-BAF4-4EC4-823F-2C3674010A70}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{DAAAAEEA-2FA9-4962-A38B-0E2AE20C8C16}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{DAAAAEEA-2FA9-4962-A38B-0E2AE20C8C16}.Debug|iPhone.Build.0 = Debug|iPhone
 		{DAAAAEEA-2FA9-4962-A38B-0E2AE20C8C16}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -167,6 +183,18 @@ Global
 		{DAAAAEEA-2FA9-4962-A38B-0E2AE20C8C16}.Release|iPhone.Build.0 = Release|iPhone
 		{DAAAAEEA-2FA9-4962-A38B-0E2AE20C8C16}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{DAAAAEEA-2FA9-4962-A38B-0E2AE20C8C16}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Debug|iPhone.Build.0 = Debug|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Release|iPhone.ActiveCfg = Release|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Release|iPhone.Build.0 = Release|iPhone
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{E75CDAFC-135E-40B8-A38A-84FBC518951D}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{E9029A4E-8215-4456-A840-EAF9DA9AE855}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{E9029A4E-8215-4456-A840-EAF9DA9AE855}.Debug|iPhone.Build.0 = Debug|iPhone
 		{E9029A4E-8215-4456-A840-EAF9DA9AE855}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -185,6 +213,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = FramesAndBounds\FramesAndBounds.csproj
+		StartupItem = GLK1\GLK1.csproj
 	EndGlobalSection
 EndGlobal
