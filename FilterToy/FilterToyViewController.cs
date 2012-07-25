@@ -114,11 +114,14 @@ namespace FilterToy
 
         void MonochromeExample()
         {
-            var mono = new CIColorMonochrome();
-            mono.Color = CIColor.FromRgb(1, 1, 1);
-            mono.Intensity = 1.0f;
             var uiImage = new UIImage("Images/photo.jpg");
-            mono.Image = CIImage.FromCGImage(uiImage.CGImage);
+            CGImage image = uiImage.CGImage;
+            var mono = new CIColorMonochrome
+            {
+                Color = CIColor.FromRgb(1, 1, 1),
+                Intensity = 1.0f,
+                Image = CIImage.FromCGImage(image)
+            };
             DisplayFilterOutput(mono, ImageView);
         }
 

@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scroller2", "Scroller2\Scro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLK1", "GLK1\GLK1.csproj", "{E75CDAFC-135E-40B8-A38A-84FBC518951D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bugs", "Bugs\Bugs.csproj", "{5F65A3C4-469E-4494-9E45-F68FDDA00352}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -107,6 +109,18 @@ Global
 		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Release|iPhone.Build.0 = Release|iPhone
 		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{5A70D427-8BF4-4818-B1B7-48C09D3B939B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Debug|iPhone.Build.0 = Debug|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Release|iPhone.ActiveCfg = Release|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Release|iPhone.Build.0 = Release|iPhone
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{5F65A3C4-469E-4494-9E45-F68FDDA00352}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
