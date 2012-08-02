@@ -89,6 +89,7 @@
     <Compile Include="SimpleController.cs" />
     <Compile Include="SimpleView.cs" />
     <Compile Include="SimpleModel.cs" />
+    <Compile Include="AnotherController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
