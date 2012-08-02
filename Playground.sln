@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLK1", "GLK1\GLK1.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bugs", "Bugs\Bugs.csproj", "{5F65A3C4-469E-4494-9E45-F68FDDA00352}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoXib", "NoXib\NoXib.csproj", "{9579A6E1-6586-4AAE-818B-EE56F29A0B92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -165,6 +167,18 @@ Global
 		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Release|iPhone.Build.0 = Release|iPhone
 		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{8FB73087-169F-4DD6-9854-C756B596F6B0}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Debug|iPhone.Build.0 = Debug|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Release|iPhone.ActiveCfg = Release|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Release|iPhone.Build.0 = Release|iPhone
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{9579A6E1-6586-4AAE-818B-EE56F29A0B92}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{CFDD49BB-0408-468D-88EE-748AD2A59028}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
@@ -227,6 +241,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = GLK1\GLK1.csproj
+		StartupItem = NoXib\NoXib.csproj
 	EndGlobalSection
 EndGlobal
