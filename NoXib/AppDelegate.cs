@@ -30,6 +30,8 @@ namespace NoXib
 			
             // If you have defined a view, add it here:
             // window.AddSubview (navigationController.View);
+            var controller = new SimpleController();
+            window.RootViewController = controller;
 			
             // make the window visible
             window.MakeKeyAndVisible();
