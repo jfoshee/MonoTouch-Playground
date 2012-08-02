@@ -6,7 +6,11 @@ namespace NoXib
     {		
         public SimpleController()
         {
-            View = new SimpleView();
+            var model = new SimpleModel();
+            var simpleView = new SimpleView();
+            simpleView.TitleLabel.Text = model.Title;
+            simpleView.TitleLabel.SizeToFit();
+            View = simpleView;
         }
     }
 }
