@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
@@ -30,12 +26,10 @@ namespace NoXib
 			
             // If you have defined a view, add it here:
             // window.AddSubview (navigationController.View);
-            var controller = new SimpleController();
-            window.RootViewController = controller;
+            window.RootViewController = new SimpleController();
 			
             // make the window visible
             window.MakeKeyAndVisible();
-			
             return true;
         }
     }
