@@ -91,9 +91,14 @@
     <Compile Include="CustomTableViewViewController.designer.cs">
       <DependentUpon>CustomTableViewViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCustomCell.cs" />
+    <Compile Include="MyCustomCell.designer.cs">
+      <DependentUpon>MyCustomCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="CustomTableViewViewController.xib" />
+    <InterfaceDefinition Include="MyCustomCell.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
