@@ -5,11 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CFDD49BB-0408-468D-88EE-748AD2A59028}</ProjectGuid>
+    <ProjectGuid>{E088A689-D42B-4D1B-B308-6DF4CE962B1E}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PhotoPicker</RootNamespace>
-    <AssemblyName>PhotoPicker</AssemblyName>
+    <RootNamespace>CustomTableView</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>CustomTableView</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>True</DebugSymbols>
@@ -86,14 +87,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="PhotoPickerViewController.cs" />
-    <Compile Include="PhotoPickerViewController.designer.cs">
-      <DependentUpon>PhotoPickerViewController.cs</DependentUpon>
+    <Compile Include="CustomTableViewViewController.cs" />
+    <Compile Include="CustomTableViewViewController.designer.cs">
+      <DependentUpon>CustomTableViewViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="PhotoPickerViewController_iPhone.xib" />
-    <InterfaceDefinition Include="PhotoPickerViewController_iPad.xib" />
+    <InterfaceDefinition Include="CustomTableViewViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
