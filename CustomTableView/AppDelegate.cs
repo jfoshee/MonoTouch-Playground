@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
@@ -15,7 +13,18 @@ namespace CustomTableView
         {
             window = new UIWindow(UIScreen.MainScreen.Bounds);
             var viewController = new UITableViewController();
-            viewController.TableView.Source = new MyTableSource();
+            var tableData = new string[] 
+            {
+                "Apple Fruit",
+                "Pear Fruit",
+                "Carrot Vegetable",
+                "Tomato Fruit",
+                "Cucumber Not sure",
+                "Potato Vegetable",
+                "Orange Fruit",
+                "Banana Fruit",
+            };
+            viewController.TableView.Source = new MyTableSource(tableData);
             window.RootViewController = viewController;
             window.MakeKeyAndVisible();
             return true;
