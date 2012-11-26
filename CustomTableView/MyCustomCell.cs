@@ -14,6 +14,13 @@ namespace CustomTableView
         public MyCustomCell(IntPtr handle) : base(handle)
         {
         }
+
+        public void BindDataToCell(string someData)
+        {
+            var labels = someData.Split(new char[] { ' ' }, 2);
+            LabelA.Text = labels[0];
+            LabelB.Text = labels[1];
+        }
     }
 }
 

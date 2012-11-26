@@ -95,6 +95,8 @@
     <Compile Include="MyCustomCell.designer.cs">
       <DependentUpon>MyCustomCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableCellFactory.cs" />
+    <Compile Include="MyTableSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="CustomTableViewViewController.xib" />
