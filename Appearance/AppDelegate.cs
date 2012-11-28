@@ -6,22 +6,20 @@ namespace Appearance
     [Register ("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        UIWindow window;
-        AppearanceViewController viewController;
+        UIWindow _window;
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             InitializeStyle();
-            window = new UIWindow(UIScreen.MainScreen.Bounds);
-            viewController = new AppearanceViewController();
-            window.RootViewController = viewController;
-            window.MakeKeyAndVisible();
+            _window = new UIWindow(UIScreen.MainScreen.Bounds);
+            _window.RootViewController = new AppearanceViewController();
+            _window.MakeKeyAndVisible();
             return true;
         }
 
         static void InitializeStyle()
         {
-            UIView.Appearance.BackgroundColor = UIColor.Blue;
+            UIView.Appearance.BackgroundColor = UIColor.Magenta;
         }
     }
 }
