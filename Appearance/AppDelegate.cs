@@ -19,7 +19,16 @@ namespace Appearance
 
         static void InitializeStyle()
         {
-            UIView.Appearance.BackgroundColor = UIColor.Magenta;
+//            UIView.Appearance.BackgroundColor = UIColor.Magenta;
+            UIButton.Appearance.
+                SetTitleColor(
+                    UIColor.Purple, UIControlState.Normal);
+            UIButton.AppearanceWhenContainedIn(typeof(UINavigationBar)).
+                SetTitleColor(
+                    UIColor.Green, UIControlState.Normal);
+            UIButton.AppearanceWhenContainedIn(typeof(UIToolbar)).
+                SetBackgroundImage(
+                    UITabBar.Appearance.BackgroundImage, UIControlState.Normal);
         }
     }
 }
