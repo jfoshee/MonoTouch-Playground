@@ -91,6 +91,7 @@
     <Compile Include="AppearanceViewController.designer.cs">
       <DependentUpon>AppearanceViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyAppearanceContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="AppearanceViewController.xib" />

@@ -26,9 +26,6 @@ namespace Appearance
             UIButton.AppearanceWhenContainedIn(typeof(UINavigationBar)).
                 SetTitleColor(
                     UIColor.Green, UIControlState.Normal);
-            UIButton.AppearanceWhenContainedIn(typeof(UIToolbar)).
-                SetBackgroundImage(
-                    UITabBar.Appearance.BackgroundImage, UIControlState.Normal);
         }
     }
 }
