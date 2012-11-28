@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoXib", "NoXib\NoXib.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTableView", "CustomTableView\CustomTableView.csproj", "{E088A689-D42B-4D1B-B308-6DF4CE962B1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appearance", "Appearance\Appearance.csproj", "{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -61,6 +63,18 @@ Global
 		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Release|iPhone.Build.0 = Release|iPhone
 		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{06B751A6-CF6A-4CEB-AD31-83C1D3E248DC}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Debug|iPhone.Build.0 = Debug|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Release|iPhone.ActiveCfg = Release|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Release|iPhone.Build.0 = Release|iPhone
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{27B819DB-CD22-4294-8247-E68DD71413F9}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{27B819DB-CD22-4294-8247-E68DD71413F9}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{27B819DB-CD22-4294-8247-E68DD71413F9}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
@@ -255,6 +269,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = CustomTableView\CustomTableView.csproj
+		StartupItem = Appearance\Appearance.csproj
 	EndGlobalSection
 EndGlobal
