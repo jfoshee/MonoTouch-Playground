@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTableView", "CustomTa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appearance", "Appearance\Appearance.csproj", "{1690CB5D-6B10-47A5-8E8C-20CC8BD841F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storyboard", "Storyboard\Storyboard.csproj", "{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetailStoryboardSample", "DetailStoryboardSample\DetailStoryboardSample.csproj", "{458A2666-5FC6-4055-AC40-B710FCE4DEF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -95,6 +99,18 @@ Global
 		{28974C97-5F59-4B18-B115-B0C809DDB466}.Release|iPhone.Build.0 = Release|iPhone
 		{28974C97-5F59-4B18-B115-B0C809DDB466}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{28974C97-5F59-4B18-B115-B0C809DDB466}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Debug|iPhone.Build.0 = Debug|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Release|iPhone.ActiveCfg = Release|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Release|iPhone.Build.0 = Release|iPhone
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{458A2666-5FC6-4055-AC40-B710FCE4DEF4}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{54D11B17-2B7E-40EF-96CE-D404C7672C5A}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{54D11B17-2B7E-40EF-96CE-D404C7672C5A}.Debug|iPhone.Build.0 = Debug|iPhone
 		{54D11B17-2B7E-40EF-96CE-D404C7672C5A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -151,6 +167,18 @@ Global
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Release|iPhone.Build.0 = Release|iPhone
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{62CCC86E-A51C-47DC-9A25-219E5ACE2631}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Debug|iPhone.Build.0 = Debug|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Release|iPhone.ActiveCfg = Release|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Release|iPhone.Build.0 = Release|iPhone
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{6DF0DE4B-42BB-4D05-8555-89C0DF2BFF48}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{6E7C97C6-56C5-4BCC-A78A-713A1DECC878}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{6E7C97C6-56C5-4BCC-A78A-713A1DECC878}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{6E7C97C6-56C5-4BCC-A78A-713A1DECC878}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
@@ -269,6 +297,6 @@ Global
 		{FE288A7F-7080-4D6C-A6D2-79F5647B02D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Appearance\Appearance.csproj
+		StartupItem = DetailStoryboardSample\DetailStoryboardSample.csproj
 	EndGlobalSection
 EndGlobal
