@@ -16,6 +16,9 @@ namespace TaskSample
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel Label { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton CancelButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -27,6 +30,11 @@ namespace TaskSample
 			if (Label != null) {
 				Label.Dispose ();
 				Label = null;
+			}
+
+			if (CancelButton != null) {
+				CancelButton.Dispose ();
+				CancelButton = null;
 			}
 		}
 	}
