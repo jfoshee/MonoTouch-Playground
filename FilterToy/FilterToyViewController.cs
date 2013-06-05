@@ -112,6 +112,20 @@ namespace FilterToy
             filter[new NSString("inputColor1")] = inputColor1;
         }
 
+        void HandleTemperatureTintFilter(CIFilter filter)
+        {
+            if (filter.Name != "CITemperatureAndTint")
+                return;
+            filter[new NSString("inputNeutral")] = new CIVector(6500, 700);
+            filter[new NSString("inputTargetNeutral")] = new CIVector(6500, 200);
+//inputNeutral
+//A CIVector object whose attribute type is CIAttributeTypeOffset and whose display name is Neutral.
+//Default value: [6500, 0]
+//inputTargetNeutral
+//A CIVector object whose attribute type is CIAttributeTypeOffset and whose display name is TargetNeutral
+//Default value: [6500, 0]
+        }
+
         void MonochromeExample()
         {
             var uiImage = new UIImage("Images/photo.jpg");
@@ -133,6 +147,7 @@ namespace FilterToy
             SetImage(filter, "inputBackgroundImage");
             HandleColorCubeFilter(filter);
             HandleFalseColorFilter(filter);
+            HandleTemperatureTintFilter(filter);
             DisplayFilterOutput(filter, ImageView);
         }
 
